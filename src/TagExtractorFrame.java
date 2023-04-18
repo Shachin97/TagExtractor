@@ -123,7 +123,7 @@ public class TagExtractorFrame extends JFrame {
                     }
                     map = (Map<String, Integer>) lines.parallelStream().collect(Collectors.groupingByConcurrent(w -> w, Collectors.counting()));
                     for (Map.Entry<String, Integer> extractWord : map.entrySet()) {
-                        textArea.append("Tag:\t" + extractWord.getKey() + "\t\tFrequency:\t\t" + extractWord.getValue() + "\n");
+                        textArea.append("Tag:\t" + extractWord.getKey() + "\t\t\tFrequency:\t\t" + extractWord.getValue() + "\n");
                     }
                     reader.close();
                 }
